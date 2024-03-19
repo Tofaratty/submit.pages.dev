@@ -1,5 +1,9 @@
 {
+  "name": "submit.pages.dev",
+  "version": "1.0.0",
+  "description": "Your Cloudflare Workers project description",
+  "main": "index.js",
   "dependencies": {
-    "@cloudflare/pages-plugin-turnstile": "*"
+    "@cloudflare/pages-plugin-turnstile": "^1.0.0"
   }
 }
