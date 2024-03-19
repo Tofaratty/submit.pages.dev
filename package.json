@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@cloudflare/pages-plugin-turnstile": "^1.0.0"
-  }
-}
-
