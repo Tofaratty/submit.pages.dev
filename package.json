@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@cloudflare/pages-plugin-turnstile": "^1.0.0"
+    "@cloudflare/pages-plugin-turnstile": "*"
   }
 }
