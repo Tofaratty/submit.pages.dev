@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="icon" type="image/png" href="https://www.cloudflare.com/favicon-128.png">
 		<link rel="stylesheet" href="/index.css">
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_turnstileCb" defer></script>
 	</head>
 	<body>
 
@@ -16,7 +17,7 @@
 			<h1>Demo: Form Submission</h1>
 
 			<blockquote>
-				<p>This is a demonstration of Cloudflare Pages with Functions.</p>
+				<p>This is a demonstration of Cloudflare Pages with Turnstile.</p>
 				<p>Pages deployed a <code>/public</code> directory, containing a HTML document (this webpage) and a <code>/functions</code> directory, which contains the Cloudflare Workers code for the API endpoint this <code>&lt;form&gt;</code> references.</p>
 				<p><b>NOTE:</b> On form submission, the API endpoint responds with a JSON representation of the data. There is no JavaScript running in this example.</p>
 			</blockquote>
@@ -65,10 +66,22 @@
 						</li>
 					</ul>
 				</div>
-
+				<div id="turnstile-widget" style="padding-top: 20px;"></div>
 				<button type="submit">Submit</button>
 			</form>
 		</main>
+	<script>
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_turnstileCb" defer></script>
+	// This function is called when the Turnstile script is loaded and ready to be used.
+	// The function name matches the "onload=..." parameter.
+	function _turnstileCb() {
+	    console.debug('_turnstileCb called');
 
+	    turnstile.render('#turnstile-widget', {
+	      sitekey: '0x4AAAAAAAVKDU-tGdf6-aOV',
+	      theme: 'light',
+	    });
+	}
+	</script>
 	</body>
 </html>
