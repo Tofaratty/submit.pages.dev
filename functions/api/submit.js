@@ -3,6 +3,8 @@
  */
 
 import turnstilePlugin from "@cloudflare/pages-plugin-turnstile";
+console.log(turnstilePlugin);
+
 
 // This is a demo secret key. In prod, we recommend you store
 // your secret key(s) safely. 
